@@ -9,4 +9,4 @@ set -e
 gpg --quiet --batch --yes --decrypt \
   "--passphrase=${IDASDK_SECRET}" \
   --output "${RUNNER_WORKSPACE}/build/idasdk91.7z" \
-  "${GITHUB_WORKSPACE}/binexport/ida/idasdk/idasdk91.7z.gpg"
+  "${GITHUB_WORKSPACE}/ida/idasdk/idasdk91.7z.gpg"
