@@ -30,8 +30,6 @@ jobs:
       run: |
         mkdir -p "${{ runner.workspace }}/build" \
               ida/idasdk
-        mv ./ida/idasdk/idasdk*.gpg \
-           ida/idasdk/
         chmod +xxx "./.github/scripts/decrypt_secret.sh"
         "./.github/scripts/decrypt_secret.sh"
         7z x -t7z  "${{ runner.workspace }}/build/idasdk91.7z" -o"${{ runner.workspace }}/build/"
