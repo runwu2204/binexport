@@ -30,10 +30,10 @@ jobs:
       run: |
         mkdir -p "${{ runner.workspace }}/build" \
               ida/idasdk
-        mv binexport/ida/idasdk/idasdk*.gpg \
+        mv ./ida/idasdk/idasdk*.gpg \
            ida/idasdk/
-        chmod +xxx "${{ github.workspace }}/binexport/.github/scripts/decrypt_secret.sh"
-        "${{ github.workspace }}/binexport/.github/scripts/decrypt_secret.sh"
+        chmod +xxx "./.github/scripts/decrypt_secret.sh"
+        "./.github/scripts/decrypt_secret.sh"
         7z x -t7z  "${{ runner.workspace }}/build/idasdk91.7z" -o"${{ runner.workspace }}/build/"
     - name: Enable Developer Command Prompt (Windows)
       if: matrix.os == 'windows-2025'
